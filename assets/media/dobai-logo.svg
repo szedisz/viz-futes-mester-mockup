@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" role="img" aria-label="Dobai Víz és Fűtés Mester logó">
+  <rect width="160" height="160" rx="32" fill="#eaf7fc"/>
+  <path d="M80 22c19 24 32 43 32 65a32 32 0 0 1-64 0c0-22 13-41 32-65z" fill="#ffffff" stroke="#245a7a" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M54 96c16-16 35 13 52-8" fill="none" stroke="#5b9fc0" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="109" cy="47" r="18" fill="#f4bd32"/>
+  <path d="M43 123h74" stroke="#245a7a" stroke-width="8" stroke-linecap="round"/>
+  <path d="M55 137h50" stroke="#5b9fc0" stroke-width="6" stroke-linecap="round"/>
+</svg>
