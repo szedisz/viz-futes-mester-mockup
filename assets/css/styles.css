@@ -922,7 +922,7 @@ body {
 
 .service-card {
   min-height: 0;
-  padding: 20px;
+  padding: 16px;
   background:
     linear-gradient(160deg, rgba(255,255,255,.96), rgba(244,251,254,.94));
 }
@@ -952,21 +952,36 @@ body {
 }
 
 .service-icon {
-  width: 44px;
-  height: 44px;
-  margin-bottom: 14px;
+  width: 72px;
+  height: 58px;
+  margin-bottom: 12px;
   border: 1px solid rgba(19, 77, 109, .12);
-  font-size: 18px;
+  font-size: 0;
   font-weight: 950;
   box-shadow: inset 0 -10px 20px rgba(255,255,255,.5);
+  overflow: hidden;
+  background-image: url("../media/before-after-gallery.png") !important;
+  background-size: 400% 400% !important;
+  background-position: 0% 0%;
 }
+
+.service-card:nth-child(1) .service-icon { background-position: 0% 0% !important; }
+.service-card:nth-child(2) .service-icon { background-position: 66.666% 0% !important; }
+.service-card:nth-child(3) .service-icon { background-position: 0% 33.333% !important; }
+.service-card:nth-child(4) .service-icon { background-position: 66.666% 33.333% !important; }
+.service-card:nth-child(5) .service-icon { background-position: 0% 66.666% !important; }
+.service-card:nth-child(6) .service-icon { background-position: 66.666% 66.666% !important; }
+.service-card:nth-child(7) .service-icon { background-position: 0% 100% !important; }
 
 .service-card h3 {
   color: var(--ink);
+  font-size: 20px;
 }
 
 .service-card p {
   color: var(--muted);
+  margin: 8px 0 12px;
+  font-size: 15px;
 }
 
 .text-link {
@@ -988,6 +1003,14 @@ body {
 .before-after-visual {
   min-height: 220px;
   background-color: #ddeaf0;
+}
+
+.before .before-after-visual.real-photo,
+.after .before-after-visual.real-photo,
+.before-after-visual.real-photo,
+.sample-visual.real-photo {
+  background-image: url("../media/before-after-gallery.png") !important;
+  background-size: 400% 400% !important;
 }
 
 .work-pair {
