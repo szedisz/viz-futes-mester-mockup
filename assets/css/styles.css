@@ -20,7 +20,7 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   color: var(--ink);
-  background: var(--paper);
+  background: #f3f8fb;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
 }
@@ -57,7 +57,7 @@ svg {
   gap: 24px;
   min-height: 74px;
   padding: 0 clamp(18px, 5vw, 72px);
-  background: rgba(247, 251, 253, .93);
+  background: rgba(255, 255, 255, .94);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(16px);
 }
@@ -146,6 +146,13 @@ svg {
   padding: clamp(28px, 4vw, 48px) clamp(18px, 5vw, 72px);
   background: linear-gradient(135deg, var(--blue-050), #fff);
   border-bottom: 1px solid var(--line);
+}
+.page-hero.no-media {
+  grid-template-columns: 1fr;
+}
+.page-hero.compact {
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 .eyebrow {
   margin: 0 0 12px;
@@ -307,10 +314,35 @@ h3 {
   box-shadow: 0 10px 28px rgba(36, 90, 122, .07);
 }
 .service-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 330px;
   padding: 22px;
+  overflow: hidden;
+}
+.service-card::before,
+.detail-card::before,
+.steps div::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 5px;
+  background: var(--blue-600);
+}
+.service-card:nth-child(3n + 1)::before,
+.detail-card:nth-child(3n + 1)::before,
+.steps div:nth-child(3n + 1)::before { background: #5b9fc0; }
+.service-card:nth-child(3n + 2)::before,
+.detail-card:nth-child(3n + 2)::before,
+.steps div:nth-child(3n + 2)::before { background: #f4bd32; }
+.service-card:nth-child(3n + 3)::before,
+.detail-card:nth-child(3n + 3)::before,
+.steps div:nth-child(3n + 3)::before { background: #73b99f; }
+.service-card:hover {
+  transform: translateY(-2px);
+  transition: transform .18s ease, box-shadow .18s ease;
+  box-shadow: 0 18px 42px rgba(36, 90, 122, .13);
 }
 .service-card-accent { background: linear-gradient(180deg, var(--yellow-soft), #fff); }
 .service-icon,
@@ -319,7 +351,7 @@ h3 {
   place-items: center;
   border-radius: 8px;
   color: var(--blue-900);
-  background: var(--blue-100);
+  background: linear-gradient(135deg, var(--blue-100), #fff4cf);
 }
 .service-icon {
   width: 46px;
@@ -386,6 +418,8 @@ h3 {
 .steps div,
 .detail-card,
 .about-card {
+  position: relative;
+  overflow: hidden;
   padding: 20px;
 }
 .steps div,
@@ -402,6 +436,20 @@ h3 {
   margin-bottom: 7px;
   color: var(--blue-900);
   font-size: 18px;
+}
+.steps strong::before,
+.detail-card strong::before,
+.sample-card h3::before {
+  content: "";
+  display: inline-grid;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  border-radius: 7px;
+  vertical-align: -5px;
+  background:
+    radial-gradient(circle at 50% 50%, var(--yellow) 0 34%, transparent 35%),
+    var(--blue-100);
 }
 .steps span {
   color: var(--muted);
@@ -516,6 +564,53 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--blue-050);
+}
+.real-photo {
+  background-image: url("../media/before-after-gallery.png");
+  background-size: 400% 400%;
+}
+.photo-1 { background-position: 0% 0%; }
+.photo-2 { background-position: 33.333% 0%; }
+.photo-3 { background-position: 66.666% 0%; }
+.photo-4 { background-position: 100% 0%; }
+.photo-5 { background-position: 0% 33.333%; }
+.photo-6 { background-position: 33.333% 33.333%; }
+.photo-7 { background-position: 66.666% 33.333%; }
+.photo-8 { background-position: 100% 33.333%; }
+.photo-9 { background-position: 0% 66.666%; }
+.photo-10 { background-position: 33.333% 66.666%; }
+.photo-11 { background-position: 66.666% 66.666%; }
+.photo-12 { background-position: 100% 66.666%; }
+.photo-13 { background-position: 0% 100%; }
+.photo-14 { background-position: 33.333% 100%; }
+.photo-15 { background-position: 66.666% 100%; }
+.photo-16 { background-position: 100% 100%; }
+.photo-17 { background-position: 0% 66.666%; }
+.photo-18 { background-position: 33.333% 66.666%; }
+.photo-19 { background-position: 0% 66.666%; }
+.photo-20 { background-position: 33.333% 66.666%; }
+.photo-21 { background-position: 66.666% 66.666%; }
+.photo-22 { background-position: 100% 66.666%; }
+.photo-23 { background-position: 66.666% 66.666%; }
+.photo-24 { background-position: 100% 66.666%; }
+.photo-25 { background-position: 0% 100%; }
+.photo-26 { background-position: 33.333% 100%; }
+.photo-27 { background-position: 66.666% 100%; }
+.photo-28 { background-position: 100% 100%; }
+.real-photo::before,
+.real-photo::after {
+  display: none;
+}
+.gallery-sheet {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+.gallery-sheet img {
+  width: 100%;
+  height: auto;
 }
 .before-after-card strong {
   display: block;
