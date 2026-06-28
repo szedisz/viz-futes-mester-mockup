@@ -1,20 +1,27 @@
 # Víz & Fűtés Mester mockup
 
-Statikus, Gitre feltölthető weboldal mockup vízszerelő és fűtésszerelő szakembernek.
+Statikus, GitHub Pages-re feltölthető többoldalas weboldal mockup vízszerelő és fűtésszerelő szakembernek.
 
-## Tartalom
+## Oldalak
 
-- `index.html` - egyoldalas weboldal
-- `styles.css` - reszponzív arculat halványabb kékekkel
-- `script.js` - mobil menü nyitása/zárása
+- `index.html` - kezdőlap
+- `szolgaltatasok.html` - szolgáltatás áttekintő
+- `vizszereles.html`
+- `dugulaselharitas.html`
+- `furdoszoba.html`
+- `padlofutes.html`
+- `falfutes.html`
+- `kazan-beepites.html`
+- `butor-osszeszereles.html`
+- `munkamenet.html`
+- `munkak.html`
+- `kapcsolat.html`
 
-## Menürendszer
+## Mappák
 
-- Szolgáltatások
-- Munkamenet
-- Munkák
-- Rólam
-- Kapcsolat
+- `assets/css/styles.css` - közös stílus
+- `assets/js/script.js` - mobil menü
+- `assets/media/service-visual.svg` - közös mockup illusztráció
 
 ## Szolgáltatások
 
@@ -28,4 +35,4 @@ Statikus, Gitre feltölthető weboldal mockup vízszerelő és fűtésszerelő s
 
 ## Használat
 
-Nyisd meg az `index.html` fájlt böngészőben, vagy töltsd fel a mappát GitHub Pages-re / statikus tárhelyre.
+Nyisd meg az `index.html` fájlt böngészőben, vagy töltsd fel a repository-t GitHub Pages-re.
