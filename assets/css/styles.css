@@ -1486,7 +1486,29 @@ textarea {
 }
 
 .home-service-panel .service-card {
-  min-height: 208px;
+  min-height: 152px;
+  padding: 12px;
+}
+
+.home-service-panel .service-icon {
+  width: 62px;
+  height: 44px;
+  margin-bottom: 8px;
+}
+
+.home-service-panel .service-card h3 {
+  font-size: 17px;
+}
+
+.home-service-panel .service-card p {
+  margin: 5px 0 8px;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.home-service-panel .service-card .text-link {
+  padding-top: 8px;
+  font-size: 14px;
 }
 
 .business-card-showcase {
@@ -1587,5 +1609,40 @@ textarea {
 
   .business-card-showcase {
     gap: 20px;
+  }
+}
+
+/* Homepage vertical rhythm: remove the forced empty hero height. */
+.hero {
+  min-height: 0;
+  align-items: start;
+  padding-bottom: clamp(18px, 2.8vw, 32px);
+}
+
+.hero + .business-card-showcase {
+  padding-top: clamp(18px, 2.6vw, 34px);
+}
+
+.business-card-showcase {
+  padding-bottom: clamp(28px, 4vw, 46px);
+}
+
+@media (max-width: 1240px) {
+  .hero {
+    padding-bottom: 18px;
+  }
+
+  .hero + .business-card-showcase {
+    padding-top: 16px;
+  }
+}
+
+@media (min-width: 1180px) {
+  .hero {
+    grid-template-columns: minmax(0, .9fr) minmax(600px, 1.1fr);
+  }
+
+  .home-service-panel {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
